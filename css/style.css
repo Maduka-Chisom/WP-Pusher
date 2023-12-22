@@ -1,0 +1,426 @@
+:root {
+  --CL-dark-grey: hsla(213, 10%, 44%, 1);
+  --CL-light-Grey: hsla(204, 18%, 90%, 1);
+  --CL-White: hsla(0, 0%, 100%, 1);
+  --nav-list: hsla(211, 35%, 17%, 1);
+  --background: hsla(204, 33%, 97%, 1);
+  --CL-form-control-border: hsla(216, 33%, 97%, 1);
+  --CL-blue: hsla(211, 49%, 55%, 1);
+  --CL-input: hsla(216, 16%, 94%, 1);
+  --CL-button: hsla(173, 96%, 28%, 1);
+  --CL-primary-section: hsla(204, 84%, 41%, 1);
+  --CL-agency: hsla(189, 100%, 86%, 0.5);
+  --CL-footer-terms: hsla(200, 49%, 38%, 1);
+  --CL-footer: hsla(200, 6%, 41%, 1);
+  /* TYPOGRAPHY */
+  --font-family: 'Lato', Sans-serif;
+  --font-wg-bold: 700;
+  --font-wg-reg: 400;
+  --font-wg-light: 300;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  background-color: var(--background);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-block-end: 1.6px solid var(--CL-light-Grey);
+  padding-block-end: 2.69rem;
+  margin: 1.8rem 2.5rem 5.31rem 2.5rem;
+}
+
+.logo {
+  height: 2.4rem;
+}
+
+/* ************************* */
+/* NAVIGATION SECTION */
+/* ************************* */
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2.75rem;
+  align-items: center;
+}
+
+.main-nav-list a:link,
+.main-nav-list a:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: hsla(211, 35%, 17%, 1);
+  font-weight: var(--font-wg-bold);
+  transition: all 0.3s;
+  letter-spacing: -0.00063rem;
+}
+
+.main-nav-list a:hover:not(.cta),
+.main-nav-list a:active:not(.cta) {
+  text-decoration: revert;
+}
+
+.main-nav-list .cta:link,
+.main-nav-list .cta:visited {
+  padding: 0.69rem 1.25rem 0.75rem 1.19rem;
+  border-radius: 0.375rem;
+  border: 2px solid var(--CL-dark-grey);
+}
+
+.main-nav-list .cta:hover,
+.main-nav-list .cta:active {
+  background-color: var(--nav-list);
+  color: var(--background);
+  border-color: var(--nav-list);
+}
+
+/* ************************* */
+/* MAIN SECTION */
+/* ************************* */
+
+.container {
+  max-width: 55.75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-block-end: 2.06rem;
+}
+
+.form {
+  padding: 3rem 2.56rem 3rem 2.93rem;
+  border-radius: 0.375rem;
+  background-color: var(--CL-White);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05),
+    0px 15px 35px 0px rgba(43, 64, 78, 0.1);
+}
+
+.form h1 {
+  color: var(--nav-list);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Lato;
+  font-size: 1.875rem;
+  font-weight: var(--font-wg-reg);
+}
+
+.horizontal-rule {
+  margin: 1.5rem -41px 2.25rem -47px;
+  border: 1.6px solid var(--CL-form-control-border);
+}
+
+.form-section {
+  display: flex;
+  gap: 0.62rem;
+  margin-block-end: 0.56rem;
+}
+
+.form-section > div {
+  width: 1.875rem;
+  height: 1.875rem;
+  color: var(--CL-blue);
+  border-radius: 50%;
+  font-weight: var(--font-wg-bold);
+  padding: 0.3rem 0.44rem 0.44rem 0.44rem;
+  border: 2px solid var(--CL-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form > h2 {
+  color: var(--nav-list);
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: var(--font-wg-bold);
+  letter-spacing: -0.01rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.88rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-block-end: 0.44rem;
+  color: var(--nav-list);
+  font-size: 0.875rem;
+  font-weight: var(--font-wg-reg);
+  display: block;
+}
+
+input {
+  border-radius: 0.25rem;
+  border: none;
+  background-color: var(--CL-input);
+  margin-block-end: 0.94rem;
+}
+
+[name='firstname'] {
+  padding: 0.56rem 1.69rem 0.63rem 0.81rem;
+}
+
+[name='lastname'] {
+  padding: 0.56rem 1rem 0.63rem 0.81rem;
+}
+
+[id='email'] {
+  padding: 0.56rem 10.62rem 0.63rem 0.81rem;
+  width: 23.125rem;
+  margin-block-end: 2.56rem;
+}
+
+.form-section-02 {
+  margin-block-start: 2.06rem;
+}
+
+.expiry-and-cvc::placeholder {
+  text-align: right;
+}
+
+.credit-card-02 {
+  display: grid;
+  grid-template-columns: 5fr 1fr 1fr;
+}
+
+.credit-card input {
+  border-collapse: collapse;
+  padding: 0.56rem 0 0.62rem 0.81rem;
+  margin-inline-end: -1px;
+  border-radius: revert;
+}
+
+.credit-card input:last-child,
+[id='expiry']::placeholder {
+  padding-inline-end: 0.62rem;
+}
+
+[id='cvc'] {
+  width: 4.25rem;
+}
+
+.credit-card input:last-child {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.credit-card input:first-child {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+button {
+  border: none;
+  display: inline-block;
+  width: 100%;
+  color: var(--CL-White);
+  padding-block-start: 0.81rem;
+  padding-block-end: 1.06rem;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: var(--font-wg-bold);
+  letter-spacing: -0.02475rem;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 0.3125rem;
+  background-color: var(--CL-button);
+  margin-block-end: 1.44rem;
+}
+
+button:hover {
+  background-color: hsl(173, 94%, 32%);
+  transition: all 0.5s;
+}
+
+.form-section-2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.62rem;
+  margin-block-end: 0.56rem;
+}
+
+.form-section-2 span {
+  color: var(--nav-list);
+  font-size: 0.875rem;
+  font-weight: var(--font-wg-bold);
+  letter-spacing: -0.00063rem;
+}
+
+.form-section-2 p {
+  width: 18.9375rem;
+  margin-block-end: 2.12rem;
+}
+
+.form-section-2 p,
+.form-section-2 a:link,
+.form-section-2 a:visited {
+  color: var(--CL-dark-grey);
+  font-size: 0.875rem;
+  font-weight: var(--font-wg-reg);
+  letter-spacing: -0.00063rem;
+}
+
+.form-section-2 a:link,
+.form-section-2 a:visited {
+  text-decoration: none;
+  border-block-end: 1.6px solid var(--CL-dark-grey);
+  padding-inline-end: 3.4rem;
+}
+
+.form-section-2 a:hover,
+.form-section-2 a:active {
+  border: none;
+  transition: all 0.5s;
+}
+
+.stripe-logo {
+  display: flex;
+  justify-content: center;
+}
+
+/* PRICING SECTION */
+.pricing-section {
+  padding: 2.63rem 2.44rem 9.62rem 2.87rem;
+  background-color: var(--CL-primary-section);
+  color: var(--CL-White);
+}
+
+.pricing-section h2 {
+  font-size: 1.25rem;
+  font-weight: var(--font-wg-bold);
+  letter-spacing: -0.00063rem;
+}
+
+.pricing-section sub,
+.pricing-section sup {
+  font-family: Lato;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.00094rem;
+}
+
+.pricing {
+  font-size: 3.75rem;
+  font-weight: 300;
+  letter-spacing: -0.00094rem;
+  margin-block-end: 0.19rem;
+}
+
+.pricing + p {
+  width: 11.8rem;
+  color: var(--CL-White);
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: var(--font-wg-reg);
+  line-height: 1.5rem; /* 150% */
+  letter-spacing: -0.0005rem;
+  margin-block-end: 2.31rem;
+}
+
+.app-features {
+  display: flex;
+  gap: 0.69rem;
+  margin-block-end: 1rem;
+}
+
+.app-features p {
+  font-weight: var(--font-wg-reg);
+  line-height: 1.5rem; /* 150% */
+  letter-spacing: -0.0005rem;
+}
+
+.app-features span {
+  font-weight: var(--font-wg-bold);
+  line-height: 1.5rem;
+  letter-spacing: -0.0005rem;
+}
+
+.agency-plan {
+  margin-block-start: 2.38rem;
+  margin-block-end: 2.63rem;
+  font-weight: var(--font-wg-reg);
+  width: 10.5rem;
+  letter-spacing: -0.0005rem;
+}
+
+.agency-plan span {
+  font-weight: var(--font-wg-bold);
+  letter-spacing: -0.0005rem;
+}
+
+.agency-plan a:link,
+.agency-plan a:visited {
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: -0.0005rem;
+  text-decoration: none;
+  border-block-end: 4px solid var(--CL-agency);
+}
+
+.agency-plan a:hover,
+.agency-plan a:active {
+  border: none;
+  transition: all 0.5s;
+}
+
+.agency-plan em {
+  font-style: italic;
+}
+
+.horizontal-rule-02 {
+  margin: 0 7px 2.56rem 1px;
+  border: 0.5px solid var(--CL-agency);
+}
+
+blockquote {
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: var(--font-wg-reg);
+  line-height: 1.5rem; /* 133.333% */
+  letter-spacing: -0.00056rem;
+  margin-block-end: 1.06rem;
+}
+
+blockquote strong {
+  font-weight: var(--font-wg-bold);
+}
+
+.authors-details {
+  display: flex;
+  gap: 0.87rem;
+  align-items: center;
+}
+
+.authors-details img {
+  border-radius: 50%;
+}
+
+.authors-details p {
+  font-weight: var(--font-wg-bold);
+}
+
+footer {
+  color: var(--CL-footer);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: var(--font-wg-reg);
+  margin-block-end: 8.69rem;
+}
+
+footer span {
+  color: var(--CL-footer-terms);
+}
+
+/* footer and body */
